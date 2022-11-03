@@ -1,5 +1,4 @@
-<img src="https://user-images.githubusercontent.com/99172632/199641221-a0c2a2fa-72fb-41c2-966d-c715a7ddd7ca.png" width="120" height="120"/>
-<img style="margin-left : 20px; margin-bottom : 10px" src="https://user-images.githubusercontent.com/99172632/199640347-761dfdb9-2978-4ff7-a3cd-4ce943895e5b.png" width="80" height="80"/>
+<img src="https://user-images.githubusercontent.com/99172632/199642263-e3003803-6e7f-4368-93a6-0e291a305fff.png" width="250" height="100"/>
 
 ## 이륜차 불법행위 탐지 서비스
 
