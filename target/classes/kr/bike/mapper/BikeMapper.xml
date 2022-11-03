@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.bike.mapper.BikeMapper">
+	<insert id="userJoin" parameterType="kr.bike.entity.User">
+		insert into user_info values
+		(#{id}, #{pw}, #{bb_num}, #{name}, #{rrn},
+		#{phone}, #{address})
+	</insert>
+
+	<select id="userLogin" resultType="kr.bike.entity.User">
+		select * from user_info
+		where
+		id=#{id} and pw=#{pw}
+	</select>
+
+	<select id="fileLoad" resultType="kr.bike.entity.Analysis">
+		select * from video_analysis
+		where vr_title=#{vr_title}
+	</select>
+
+	<select id="boardList" resultType="kr.bike.entity.Board">
+		select * from board
+		order by
+		bo_num desc
+	</select>
+
+	<select id="cloudList" resultType="kr.bike.entity.Original">
+		select * from video_original
+		order by vo_title
+	</select>
+
+	<select id="idCheck" resultType="kr.bike.entity.User">
+		select * from user_info
+		where id=#{id}
+	</select>
+	
+	<insert id="boardInsert" parameterType="kr.bike.entity.Board">
+		insert into board(bo_num, vr_ill, bo_date, name)
+	    values(bo_num_seq.nextval, #{vr_ill}, sysdate, #{name})
+	</insert>
+</mapper>
